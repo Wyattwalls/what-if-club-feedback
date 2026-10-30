@@ -1,0 +1,44 @@
+name: Bug report
+description: Something broke, looked wrong or would not load
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. If the club showed an error, its panel has a **Copy details** button: paste what it copies below.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options:
+        - Meta Quest (in VR)
+        - Meta Quest (browser, not in VR)
+        - Another VR headset
+        - Phone or tablet
+        - Computer
+    validations:
+      required: true
+  - type: input
+    id: song
+    attributes:
+      label: Song
+      description: Which song was playing or loading, if any.
+      placeholder: e.g. Nine Arms
+  - type: textarea
+    id: details
+    attributes:
+      label: Details from the club
+      description: Paste what the Copy details button copied (if there was one), or your browser and its version.
+      render: text
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshot or video
+      description: Drag files in here, if you have any.
